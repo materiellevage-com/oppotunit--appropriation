@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fiche d’Opportunité - MATERIEL-LEVAGE.COM</title>
+<style>
+    body { font-family: Arial, sans-serif; margin: 20px; background: #f9f9f9; }
+    h1, h2 { color: #2b6cb0; }
+    section { background: #fff; padding: 15px; margin-bottom: 15px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);}
+    label { font-weight: bold; display: block; margin-top: 10px; }
+    input, textarea, select { width: 100%; padding: 6px; margin-top: 5px; border-radius: 4px; border: 1px solid #ccc; }
+    table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+    th, td { border: 1px solid #ccc; padding: 8px; text-align: left; }
+    button { padding: 10px 15px; margin-top: 10px; background: #2b6cb0; color: #fff; border: none; border-radius: 4px; cursor: pointer; }
+    button:hover { background: #1e4e8c; }
+</style>
+</head>
+<body>
+
+<h1>Fiche d’Opportunité & d’Appropriation Produit</h1>
+
+<form id="ficheForm">
+
+    <!-- 1️⃣ Synthèse commerciale -->
+    <section>
+        <h2>1️⃣ Synthèse commerciale</h2>
+        <label>Prix d’achat / Coût fournisseur</label>
+        <input type="text" name="prixAchat" placeholder="Ex: 100€">
+        <label>Prix de vente conseillé</label>
+        <input type="text" name="prixVente">
+        <label>Marge cible</label>
+        <input type="text" name="marge">
+        <label>Segment client / cible</label>
+        <input type="text" name="segment">
+        <label>Mode de distribution</label>
+        <select name="distribution">
+            <option value="Stock">Stock</option>
+            <option value="Dropshipping">Dropshipping</option>
+            <option value="Fabrication">Fabrication à la commande</option>
+        </select>
+        <label>Délai moyen de livraison</label>
+        <input type="text" name="delaiLivraison">
+        <label>Observations stratégiques</label>
+        <textarea name="observationsCommerciales"></textarea>
+    </section>
+
+    <!-- 2️⃣ Stratégie marketing & SEO -->
+    <section>
+        <h2>2️⃣ Stratégie marketing & SEO</h2>
+        <label>Titre produit SEO</label>
+        <input type="text" name="titreSEO">
+        <label>Mots-clés / Cocon sémantique</label>
+        <textarea name="motsCles"></textarea>
+        <label>Images principales</label>
+        <textarea name="images"></textarea>
+        <label>Supports additionnels (PDF, vidéos, guides)</label>
+        <textarea name="supports"></textarea>
+        <label>Proposition d’accroche marketing</label>
+        <textarea name="accroche"></textarea>
+    </section>
+
+    <!-- 3️⃣ Appropriation technique -->
+    <section>
+        <h2>3️⃣ Appropriation technique</h2>
+        <label>Performances et limites produit</label>
+        <textarea name="performances"></textarea>
+        <label>Caractéristiques principales</label>
+        <textarea name="caracteristiques"></textarea>
+        <label>Usage prévu / environnement</label>
+        <textarea name="usage"></textarea>
+        <label>Points de vigilance / risques</label>
+        <textarea name="risques"></textarea>
+    </section>
+
+    <!-- 4️⃣ Normes & réglementations -->
+    <section>
+        <h2>4️⃣ Normes & réglementations</h2>
+        <label>Certifications / Marquages CE</label>
+        <input type="text" name="certifications">
+        <label>Normes applicables</label>
+        <input type="text" name="normes">
+        <label>Notice fournisseur disponible</label>
+        <select name="notice">
+            <option value="Oui">Oui</option>
+            <option value="Non">Non</option>
+        </select>
+    </section>
+
+    <!-- 5️⃣ Construction de l’offre -->
+    <section>
+        <h2>5️⃣ Construction de l’offre</h2>
+        <label>Type de construction (FNR → MATERIEL-LEVAGE.COM → Produit → Déclinaisons)</label>
+        <textarea name="construction"></textarea>
+        <table>
+            <thead>
+                <tr>
+                    <th>Cas</th>
+                    <th>Produit MATERIEL-LEVAGE.COM</th>
+                    <th>Déclinaison / Option</th>
+                    <th>Remarques / Arbitrages validés</th>
+                </tr>
+            </thead>
+            <tbody id="tableConstruction">
+                <tr>
+                    <td>1 produit FNR = 1 produit MATERIEL-LEVAGE.COM</td>
+                    <td contenteditable="true"></td>
+                    <td contenteditable="true"></td>
+                    <td contenteditable="true"></td>
+                </tr>
+                <tr>
+                    <td>1 produit FNR + N options = 1 produit MATERIEL-LEVAGE.COM + N déclinaisons</td>
+                    <td contenteditable="true"></td>
+                    <td contenteditable="true"></td>
+                    <td contenteditable="true"></td>
+                </tr>
+                <tr>
+                    <td>1 produit FNR + N options = 1 produit MATERIEL-LEVAGE.COM + N produits option</td>
+                    <td contenteditable="true"></td>
+                    <td contenteditable="true"></td>
+                    <td contenteditable="true"></td>
+                </tr>
+                <tr>
+                    <td>N produits FNR = 1 produit MATERIEL-LEVAGE.COM + N déclinaisons</td>
+                    <td contenteditable="true"></td>
+                    <td contenteditable="true"></td>
+                    <td contenteditable="true"></td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- 6️⃣ Logistique & distribution -->
+    <section>
+        <h2>6️⃣ Logistique & distribution</h2>
+        <label>Mode de livraison recommandé</label>
+        <input type="text" name="modeLivraison">
+        <label>Délais moyens / maximum</label>
+        <input type="text" name="delais">
+        <label>Stock ou production à la demande</label>
+        <input type="text" name="stock">
+        <label>Observations logistiques</label>
+        <textarea name="observationsLogistiques"></textarea>
+    </section>
+
+    <!-- 7️⃣ Arbitrages & validation -->
+    <section>
+        <h2>7️⃣ Arbitrages & validation</h2>
+        <label>Décisions clés prises</label>
+        <textarea name="decisions"></textarea>
+        <label>Commentaires / observations direction</label>
+        <textarea name="commentaires"></textarea>
+        <label>Validation formelle</label>
+        <select name="validation">
+            <option value="Oui">Oui</option>
+            <option value="Non">Non</option>
+        </select>
+        <label>Signatures</label>
+        <input type="text" name="signatures" placeholder="Chargé création / Référent / Direction">
+    </section>
+
+    <button type="button" onclick="saveFiche()">Enregistrer la fiche</button>
+    <button type="button" onclick="showFiches()">Afficher fiches sauvegardées</button>
+
+</form>
+
+<hr>
+<h2>Fiches sauvegardées</h2>
+<div id="savedFiches"></div>
+
+<script>
+// Sauvegarde dans localStorage
+function saveFiche() {
+    const form = document.getElementById('ficheForm');
+    const data = {};
+    Array.from(form.elements).forEach(el => {
+        if (el.name) data[el.name] = el.value;
+    });
+    let fiches = JSON.parse(localStorage.getItem('fiches')) || [];
+    fiches.push(data);
+    localStorage.setItem('fiches', JSON.stringify(fiches));
+    alert('Fiche enregistrée !');
+}
+
+// Affichage des fiches sauvegardées
+function showFiches() {
+    const container = document.getElementById('savedFiches');
+    container.innerHTML = '';
+    const fiches = JSON.parse(localStorage.getItem('fiches')) || [];
+    fiches.forEach((fiche, index) => {
+        const div = document.createElement('div');
+        div.style.border = '1px solid #ccc';
+        div.style.padding = '10px';
+        div.style.marginBottom = '10px';
+        div.innerHTML = `<strong>Fiche ${index + 1}</strong><pre>${JSON.stringify(fiche, null, 2)}</pre>`;
+        container.appendChild(div);
+    });
+}
+</script>
+
+</body>
+</html>
